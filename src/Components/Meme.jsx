@@ -45,12 +45,12 @@ export default function Meme(){
 
     return (
         <main>
-            <div className='flex flex-col justify-around items-center mt-3 sm:justify-center'>
-                <div className='box-border flex flex-row justify-center items-center mb-5 font-sans sm:w-60 sm:flex-col sm:gap-3 md:w-64 md:flex-col md:gap-4'>
+            <div className='flex flex-col sm:justify-around items-center mt-3 justify-center'>
+                <div className='box-border flex md:flex-row justify-center items-center mb-5 font-sans w-64 flex-col gap-3'>
                     <input type="text" className='px-3 w-[230px] h-[35px] rounded-md border border-[#D5D4D8]' name='topText' onChange={handleChange} value={meme.topText} placeholder='Top Text'/>
                     <input type="text" className='px-3 w-[230px] h-[35px] rounded-md border border-[#D5D4D8]' name='bottomText' onChange={handleChange} value={meme.bottomText} placeholder='Bottom Text'/>
                 </div>
-                <button className='cursor-pointer bg-gradient-to-r from-[#672280] to-[#A626D3] w-[477px] sm:w-96 h-[40px] sm:h-16 rounded-md text-white font-Karla' onClick={randomMeme}>Get a new meme image 🖼</button>
+                <button className='cursor-pointer bg-gradient-to-r from-[#672280] to-[#A626D3] md:w-[477px] w-96 md:h-[40px] h-16 rounded-md text-white font-Karla' onClick={randomMeme}>Get a new meme image 🖼</button>
                 <div className='relative w-[477px] h-[350px] rounded-sm mt-5 drop-shadow-lg' style={style}>
                     <h2 className="text-3xl font-['Impact'] drop-shadow-lg uppercase tracking-[1px] w-[80%] -translate-x-[50%] text-center absolute text-white left-1/2 top-5">{meme.topText}</h2>
                     <h2 className="text-3xl font-['Impact'] drop-shadow-lg uppercase tracking-[1px] w-[80%] -translate-x-[50%] text-center absolute text-white left-1/2 bottom-7">{meme.bottomText}</h2>
